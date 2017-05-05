@@ -13,8 +13,8 @@ import java.util.Random;
  */
 class DiceRoller implements Roller {
 
-  private final int quantity;
-  private final int faces;
+  final int quantity;
+  final int faces;
 
   DiceRoller(int quantity, int faces) {
     this.quantity = quantity;

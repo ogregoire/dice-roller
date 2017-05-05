@@ -70,6 +70,21 @@ public abstract class Roll {
 
   }
 
+  static class Aggregate extends Roll {
+    private final int value;
+    
+    Aggregate(int value) {
+      this.value = value;
+    }
+
+    @Override
+    protected IntStream raw() {
+      return IntStream.of(value);
+    }
+    
+    
+  }
+  
   static class Unique extends Roll {
 
     private final int value;

@@ -14,12 +14,12 @@ import java.util.Random;
 @FunctionalInterface
 public interface Roller {
 
+  static Roller compile(String expression) {
+    return null;
+  }
+
   static Roller dice(int quantity, int faces) {
     return new DiceRoller(quantity, faces);
-  }
-  
-  default Roller plus(Roller roller) {
-    return new PlusRoller(this, roller);
   }
 
   Roll roll(Random random);
